@@ -1,0 +1,11 @@
+model Video {
+  id         Int       @id @default(autoincrement())
+  name       String    @unique
+  is_public  Boolean
+  views      Int?      @default(0)
+  like       Int?      @default(0)
+  dislike    Int?      @default(0)
+  video_path String
+  thumbnail  String
+  comments   Comment[]
+}

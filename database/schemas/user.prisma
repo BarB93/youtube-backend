@@ -1,0 +1,13 @@
+model User {
+  id                Int       @id @default(autoincrement())
+  email             String    @unique
+  hash              String
+  name              String?
+  is_verified       Boolean?
+  subscribers_count Int       @default(0)
+  description       String?
+  location          String?
+  banner_path       String?
+  avatar_path       String?
+  comments          Comment[]
+}
